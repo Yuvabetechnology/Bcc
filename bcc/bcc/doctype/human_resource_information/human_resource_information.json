@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-01-22 16:26:16.264163",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "role",
+  "responsibility",
+  "working_hours_week",
+  "status",
+  "maintenance_support"
+ ],
+ "fields": [
+  {
+   "fieldname": "role",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Role"
+  },
+  {
+   "fieldname": "responsibility",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Responsibility"
+  },
+  {
+   "fieldname": "working_hours_week",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Working Hours /  Week"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "AV\nEmployee\nVolunteer"
+  },
+  {
+   "fieldname": "maintenance_support",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Maintenance Support",
+   "options": "City Service\nService\nSelf\nOthers"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-22 16:27:43.950926",
+ "modified_by": "Administrator",
+ "module": "Bcc",
+ "name": "Human Resource Information",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

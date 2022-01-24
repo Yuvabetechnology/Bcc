@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-01-22 14:56:54.745992",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "worker_name",
+  "father_name",
+  "addharcard_number",
+  "date_of_birth",
+  "village_name",
+  "start_date_of_employment",
+  "job_role",
+  "amount",
+  "epf",
+  "esi",
+  "sewa",
+  "bonus",
+  "bonus_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "worker_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Worker Name"
+  },
+  {
+   "fieldname": "father_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Father Name"
+  },
+  {
+   "fieldname": "addharcard_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Addharcard Number"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Date Of Birth"
+  },
+  {
+   "fieldname": "village_name",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Village Name"
+  },
+  {
+   "fieldname": "start_date_of_employment",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start Date of Employment"
+  },
+  {
+   "fieldname": "job_role",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Job Role"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "default": "0",
+   "fieldname": "epf",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "EPF"
+  },
+  {
+   "default": "0",
+   "fieldname": "esi",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "ESI"
+  },
+  {
+   "default": "0",
+   "fieldname": "sewa",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "SEWA"
+  },
+  {
+   "default": "0",
+   "fieldname": "bonus",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Bonus"
+  },
+  {
+   "depends_on": "eval:doc.bonus",
+   "fieldname": "bonus_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Bonus Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-23 12:18:46.279382",
+ "modified_by": "Administrator",
+ "module": "Bcc",
+ "name": "Salaries And Wages",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

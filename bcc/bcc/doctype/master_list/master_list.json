@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Prompt",
+ "creation": "2022-01-22 12:42:15.091693",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "master_list_number",
+  "first_name",
+  "last_name",
+  "email",
+  "contact_number",
+  "account_numberfs",
+  "community",
+  "auroville_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "master_list_number",
+   "fieldtype": "Data",
+   "label": "Master List Number"
+  },
+  {
+   "fieldname": "account_numberfs",
+   "fieldtype": "Int",
+   "label": "Account Number(FS)"
+  },
+  {
+   "fieldname": "community",
+   "fieldtype": "Data",
+   "label": "Community"
+  },
+  {
+   "fieldname": "auroville_status",
+   "fieldtype": "Select",
+   "label": "Auroville Status",
+   "options": "Aurovilian\nNewcomer"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "label": "Contact Number",
+   "options": "Phone"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-01-22 15:17:46.412476",
+ "modified_by": "Administrator",
+ "module": "Bcc",
+ "name": "Master List",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-01-22 13:23:23.940756",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "person_name",
+  "role",
+  "email",
+  "contact_number"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fieldname": "role",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Role",
+   "options": "Manager\nAccountant",
+   "translatable": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fieldname": "person_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Name",
+   "translatable": 1
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fieldname": "contact_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Phone Or Mobile",
+   "translatable": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-22 18:29:16.687285",
+ "modified_by": "Administrator",
+ "module": "Bcc",
+ "name": "Contact Persons",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

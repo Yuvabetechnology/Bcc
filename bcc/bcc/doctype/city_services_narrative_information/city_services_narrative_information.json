@@ -1,0 +1,271 @@
+{
+ "actions": [
+  {
+   "action": "/me",
+   "action_type": "Route",
+   "label": "Frappe"
+  }
+ ],
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:applicant_name",
+ "creation": "2022-01-22 12:33:41.148513",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "applicant_name",
+  "application_type",
+  "select_service_trust",
+  "organization_email",
+  "column_break_4",
+  "created_by",
+  "created_on",
+  "sector",
+  "website",
+  "section_break_7",
+  "contact_persons",
+  "section_break_9",
+  "intend_brief_overview",
+  "section_break_11",
+  "why_service_needed",
+  "section_break_13",
+  "similar_service",
+  "similar_service_explain",
+  "section_break_23",
+  "intended_beneficiaries",
+  "section_break_15",
+  "intend_to_charge",
+  "column_break_17",
+  "number_of_community_benefit",
+  "section_break_18",
+  "charge_explain_details",
+  "section_break_16",
+  "brief_similar_service",
+  "section_break_19",
+  "goals_and_objectives",
+  "section_break_21",
+  "challenges",
+  "section_break_22",
+  "human_resource",
+  "route",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "application_type",
+   "fieldtype": "Select",
+   "label": "Application Type",
+   "options": "\nService\nProject"
+  },
+  {
+   "fieldname": "created_on",
+   "fieldtype": "Datetime",
+   "label": "Created On"
+  },
+  {
+   "fieldname": "sector",
+   "fieldtype": "Select",
+   "label": "Sector",
+   "options": "Education\nSocial Support\nMunicipal Services\nHealth\nForest\nOrganization\nArts Culture And Sports\nFarms\nOutreach\nLand\nMatrimandir\nHousing"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website (if any): "
+  },
+  {
+   "depends_on": "eval:doc.application_type == \"Service\"",
+   "fieldname": "organization_email",
+   "fieldtype": "Data",
+   "label": "Organization Email"
+  },
+  {
+   "fieldname": "contact_persons",
+   "fieldtype": "Table",
+   "label": "Contact Persons",
+   "options": "Contact Persons"
+  },
+  {
+   "fieldname": "why_service_needed",
+   "fieldtype": "Text Editor",
+   "label": "Why do you feel this service is needed?"
+  },
+  {
+   "fieldname": "intend_brief_overview",
+   "fieldtype": "Text Editor",
+   "label": "Give a brief overview of what kind of service you intend provide to the community:"
+  },
+  {
+   "fieldname": "intended_beneficiaries",
+   "fieldtype": "Text Editor",
+   "label": "Who Are Your Target Groups Intended Beneficiaries?\u00a0"
+  },
+  {
+   "fieldname": "number_of_community_benefit",
+   "fieldtype": "Select",
+   "label": "Expected Community members Use And Benefit From The Service",
+   "options": "10-100\n100-200\n200-300"
+  },
+  {
+   "depends_on": "eval:doc.intend_to_charge == \"Yes\"",
+   "fieldname": "charge_explain_details",
+   "fieldtype": "Text Editor",
+   "label": "Please Explain The Reason/Need For This And For What Aspect Of The Service Provided They Would Be Charged"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.similer_service_yes",
+   "fieldname": "brief_similar_service",
+   "fieldtype": "Text Editor",
+   "label": "how these are different from similar ones provided by other services?"
+  },
+  {
+   "fieldname": "goals_and_objectives",
+   "fieldtype": "Text Editor",
+   "label": "What are your goals and objectives for the coming year?  "
+  },
+  {
+   "fieldname": "challenges",
+   "fieldtype": "Text Editor",
+   "label": "What are the challenges you foresee?"
+  },
+  {
+   "fieldname": "section_break_19",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "human_resource",
+   "fieldtype": "Table",
+   "label": "Human Resource ",
+   "options": "Human Resource Information"
+  },
+  {
+   "fieldname": "section_break_21",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "intend_to_charge",
+   "fieldtype": "Select",
+   "label": "Do you intend to charge users for the service?",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.application_type == \"Service\"",
+   "fieldname": "select_service_trust",
+   "fieldtype": "Data",
+   "label": "Select Service Trust"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "created_by",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User"
+  },
+  {
+   "fieldname": "similar_service",
+   "fieldtype": "Select",
+   "label": "Is Your Service Or Activity  Similar To Ones provided By Other Services? ",
+   "options": "\nYes\nNo"
+  },
+  {
+   "depends_on": "eval:doc.similar_service == \"Yes\"",
+   "fieldname": "similar_service_explain",
+   "fieldtype": "Text Editor",
+   "label": "if applicable, how these are different from similar ones provided by other services in the community?"
+  },
+  {
+   "fieldname": "section_break_23",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "route",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "City Services Narrative Information",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "applicant_name",
+   "fieldtype": "Data",
+   "label": "Applicant Name",
+   "unique": 1
+  }
+ ],
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-01-23 21:35:34.351402",
+ "modified_by": "Administrator",
+ "module": "Bcc",
+ "name": "City Services Narrative Information",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

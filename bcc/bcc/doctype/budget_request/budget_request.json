@@ -1,0 +1,209 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-01-22 12:32:04.476723",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "budget_application",
+  "budget_type",
+  "column_break_3",
+  "fiscal_year",
+  "created_on",
+  "request_owner",
+  "section_break_7",
+  "specify_income_and_revenue",
+  "section_break_10",
+  "net_balance",
+  "section_break_11",
+  "auroville_maintenance",
+  "section_break_12",
+  "self_service_maintenace",
+  "section_break_14",
+  "salary_wages",
+  "section_break_16",
+  "administrative_recurring_expense",
+  "section_break_18",
+  "school_recurring_expense",
+  "route",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "created_on",
+   "fieldtype": "Datetime",
+   "label": "Created On",
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "request_owner",
+   "fieldtype": "Link",
+   "label": "Request Owner",
+   "options": "User",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "budget_type",
+   "fieldtype": "Select",
+   "label": "Budget Type",
+   "options": "Annual\nSpecial"
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Select",
+   "label": "Fiscal year",
+   "options": "2022-2023"
+  },
+  {
+   "fieldname": "budget_application",
+   "fieldtype": "Link",
+   "label": "Select Budget Application",
+   "options": "City Services Narrative Information"
+  },
+  {
+   "fieldname": "specify_income_and_revenue",
+   "fieldtype": "Table",
+   "label": "Specify Income And Revenue",
+   "options": "Income And Revenue"
+  },
+  {
+   "fieldname": "net_balance",
+   "fieldtype": "Table",
+   "label": "Specify Net Balance ",
+   "options": "Net Balance All Accounts"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break",
+   "label": "Specify Income And Revenue Details Current year"
+  },
+  {
+   "fieldname": "auroville_maintenance",
+   "fieldtype": "Table",
+   "label": "Specify Only Auroville Maintenance (Only)",
+   "options": "Auroville Maintenance"
+  },
+  {
+   "fieldname": "self_service_maintenace",
+   "fieldtype": "Table",
+   "label": "Specify Only Self And Service Supported Persons",
+   "options": "Self And Service Support Maintenance"
+  },
+  {
+   "fieldname": "salary_wages",
+   "fieldtype": "Table",
+   "label": "Specify Regular Salary Wages  Requirement ",
+   "options": "Salaries And Wages"
+  },
+  {
+   "fieldname": "administrative_recurring_expense",
+   "fieldtype": "Table",
+   "label": "Required Administrative Recurring Expense Only ",
+   "options": "Required Administrative Recurring Expenses"
+  },
+  {
+   "fieldname": "school_recurring_expense",
+   "fieldtype": "Table",
+   "label": "Administrative Recurring Expenses for Schools Only",
+   "options": "Administrative Recurring Expenses for Schools"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Maintenance Supported By Service And Self"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "Regular Salary Wages  Requirement "
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break",
+   "label": "Required Administrative Recurring Expense"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break",
+   "label": "Required Administrative Recurring Expenses for Schools Only"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break",
+   "label": " Required  Auroville Maintenance "
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Specify Net Balance Of The  Current Year "
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "route"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Budget Request",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "has_web_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-01-23 19:23:52.740749",
+ "modified_by": "Administrator",
+ "module": "Bcc",
+ "name": "Budget Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Budget Applicant",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

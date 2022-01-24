@@ -1,0 +1,63 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-01-22 20:11:10.713662",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "account_type",
+  "account_name",
+  "account_number",
+  "balance"
+ ],
+ "fields": [
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fieldname": "account_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Account Type",
+   "options": "Financial Service\nBank\nCash"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Account Name"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "bold": 1,
+   "fieldname": "account_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Account Number"
+  },
+  {
+   "bold": 1,
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Balance"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-01-22 20:15:20.361463",
+ "modified_by": "Administrator",
+ "module": "Bcc",
+ "name": "Net Balance All Accounts",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
