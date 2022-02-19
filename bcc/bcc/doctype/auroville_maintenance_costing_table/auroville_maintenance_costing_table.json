@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-17 16:07:47.040107",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "maintenance_type",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "maintenance_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Maintenance Type",
+   "options": "Maintenance Type"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-02-17 16:14:19.854925",
+ "modified_by": "Administrator",
+ "module": "Bcc",
+ "name": "Auroville Maintenance Costing Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

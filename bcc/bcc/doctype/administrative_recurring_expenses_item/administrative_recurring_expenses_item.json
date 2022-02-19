@@ -1,24 +1,31 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "Prompt",
+ "autoname": "field:expenses_name",
  "creation": "2022-01-22 13:25:23.334378",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "account__code"
+  "account__code",
+  "expenses_name"
  ],
  "fields": [
   {
    "fieldname": "account__code",
    "fieldtype": "Int",
    "label": "Account  Code"
+  },
+  {
+   "fieldname": "expenses_name",
+   "fieldtype": "Data",
+   "label": "Expenses Name",
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-01-25 11:27:03.556209",
+ "modified": "2022-02-10 17:51:13.284843",
  "modified_by": "Administrator",
  "module": "Bcc",
  "name": "Administrative Recurring Expenses Item",

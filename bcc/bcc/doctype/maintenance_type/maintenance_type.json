@@ -1,34 +1,28 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:expenses_name",
- "creation": "2022-01-23 12:35:22.540679",
+ "autoname": "field:maintenance_type",
+ "creation": "2022-02-17 16:13:23.805391",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "account__code",
-  "expenses_name"
+  "maintenance_type"
  ],
  "fields": [
   {
-   "fieldname": "account__code",
-   "fieldtype": "Int",
-   "label": "Account  Code"
-  },
-  {
-   "fieldname": "expenses_name",
+   "fieldname": "maintenance_type",
    "fieldtype": "Data",
-   "label": "Expenses Name",
+   "label": "Maintenance Type",
    "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-16 10:13:17.520010",
+ "modified": "2022-02-17 16:16:43.858184",
  "modified_by": "Administrator",
  "module": "Bcc",
- "name": "Establishment Recurring Expenses Item",
+ "name": "Maintenance Type",
  "owner": "Administrator",
  "permissions": [
   {
@@ -40,18 +34,6 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Budget Applicant",
    "share": 1,
    "write": 1
   }

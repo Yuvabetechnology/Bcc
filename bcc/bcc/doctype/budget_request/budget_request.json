@@ -1,12 +1,17 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:REQ-{#####} -{budget_application}-{DD}/{MM}/{YY}",
  "creation": "2022-01-22 12:32:04.476723",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "budget_request_overview_section",
+  "overview",
+  "request_details_section",
   "budget_application",
+  "request_status",
   "budget_type",
   "column_break_3",
   "fiscal_year",
@@ -14,52 +19,75 @@
   "request_owner",
   "section_break_7",
   "specify_income_and_revenue",
+  "total_income",
   "section_break_10",
   "net_balance",
+  "total_net_balance",
   "section_break_11",
   "auroville_maintenance",
+  "total_av_maintenance",
   "section_break_12",
   "self_service_maintenace",
+  "total_ss_maintenance",
   "section_break_14",
   "salary_wages",
+  "total_salary",
   "section_break_16",
   "administrative_recurring_expense",
+  "total_are",
   "section_break_18",
   "school_recurring_expense",
-  "route",
+  "total_res",
+  "request_for_non_recurring_section",
+  "non_recurring_expenses",
+  "total_nre",
   "amended_from"
  ],
  "fields": [
   {
    "fieldname": "created_on",
    "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_preview": 1,
    "label": "Created On",
-   "read_only": 1,
-   "set_only_once": 1
+   "read_only": 1
   },
   {
    "fieldname": "request_owner",
    "fieldtype": "Link",
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
    "label": "Request Owner",
    "options": "User",
+   "remember_last_selected_value": 1,
    "set_only_once": 1
   },
   {
    "fieldname": "budget_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
    "label": "Budget Type",
    "options": "Annual\nSpecial"
   },
   {
    "fieldname": "fiscal_year",
    "fieldtype": "Select",
+   "in_standard_filter": 1,
    "label": "Fiscal year",
    "options": "2022-2023"
   },
   {
    "fieldname": "budget_application",
    "fieldtype": "Link",
-   "label": "Select Budget Application",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Service Name / Project",
    "options": "City Services Narrative Information"
   },
   {
@@ -151,11 +179,6 @@
    "label": "Specify Net Balance Of The  Current Year "
   },
   {
-   "fieldname": "route",
-   "fieldtype": "Data",
-   "label": "route"
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -163,13 +186,84 @@
    "options": "Budget Request",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "budget_request_overview_section",
+   "fieldtype": "Section Break",
+   "label": "Budget Request overview"
+  },
+  {
+   "fieldname": "overview",
+   "fieldtype": "HTML",
+   "label": "Overview",
+   "options": "<div class=\"widget-group \">\n    <div class=\"widget-group-head\">\n        \n        <div class=\"widget-group-control\"></div>\n    </div>\n    <div class=\"widget-group-body grid-col-3\"><div class=\"widget         widget-shadow    number-widget-box\">\n<div class=\"widget-head\">\n    <div>\n        <div class=\"widget-title ellipsis\"><div class=\"number-label\">Total Income</div></div>\n        <div class=\"widget-subtitle\"></div>\n    </div>\n    <div class=\"widget-control\"><div class=\"card-actions dropdown pull-right\">\n    <a>\n    ...\n    </a>\n    <ul class=\"dropdown-menu\" style=\"max-height: 300px; overflow-y: auto;\">\n        <li class=\"dropdown-item\">\n                        <a>Refresh</a>\n                    </li><li class=\"dropdown-item\">\n                        <a>Edit</a>\n                    </li>\n    </ul>\n</div></div>\n</div>\n<div class=\"widget-body\"><div class=\"widget-content\">\n    <div class=\"number\" id=\"total_income\" style=\"color: undefined;\">\u20b9 0.00 </div>\n    <div class=\"card-stats grey-stat\">\n    <span class=\"percentage-stat-area\">\n        \n        <span class=\"percentage-stat\">\n            NaN %\n        </span>\n    </span>\n    <span class=\"stat-period text-muted\">\n        since last year\n    </span>\n</div></div></div>\n<div class=\"widget-footer\">\n</div>\n</div><div class=\"widget         widget-shadow    number-widget-box\">\n<div class=\"widget-head\">\n    <div>\n        <div class=\"widget-title ellipsis\"><div class=\"number-label\">Total AV Maintenance</div></div>\n        <div class=\"widget-subtitle\"></div>\n    </div>\n    <div class=\"widget-control\"><div class=\"card-actions dropdown pull-right\">\n    <a>\n    ...\n    </a>\n    <ul class=\"dropdown-menu\" style=\"max-height: 300px; overflow-y: auto;\">\n        <li class=\"dropdown-item\">\n                        <a>Refresh</a>\n                    </li><li class=\"dropdown-item\">\n                        <a>Edit</a>\n                    </li>\n    </ul>\n</div></div>\n</div>\n<div class=\"widget-body\"><div class=\"widget-content\">\n    <div class=\"number\" id=\"total_avm\" style=\"color: undefined;\">\u20b9 0.00 </div>\n    <div class=\"card-stats grey-stat\">\n    <span class=\"percentage-stat-area\">\n        \n        <span class=\"percentage-stat\">\n            NaN %\n        </span>\n    </span>\n    <span class=\"stat-period text-muted\">\n        since last year\n    </span>\n</div></div></div>\n<div class=\"widget-footer\">\n</div>\n</div><div class=\"widget         widget-shadow    number-widget-box\">\n<div class=\"widget-head\">\n    <div>\n        <div class=\"widget-title ellipsis\"><div class=\"number-label\">Total Net Balance</div></div>\n        <div class=\"widget-subtitle\"></div>\n    </div>\n    <div class=\"widget-control\"><div class=\"card-actions dropdown pull-right\">\n    <a>\n    ...\n    </a>\n    <ul class=\"dropdown-menu\" style=\"max-height: 300px; overflow-y: auto;\">\n        <li class=\"dropdown-item\">\n                        <a>Refresh</a>\n                    </li><li class=\"dropdown-item\">\n                        <a>Edit</a>\n                    </li>\n    </ul>\n</div></div>\n</div>\n<div class=\"widget-body\"><div class=\"widget-content\">\n    <div class=\"number\" id=\"total_nb\" style=\"color: undefined;\">\u20b9 0.00 </div>\n    <div class=\"card-stats grey-stat\">\n    <span class=\"percentage-stat-area\">\n        \n        <span class=\"percentage-stat\">\n            NaN %\n        </span>\n    </span>\n    <span class=\"stat-period text-muted\">\n        since last year\n    </span>\n</div></div></div>\n<div class=\"widget-footer\">\n</div>\n</div><div class=\"widget         widget-shadow    number-widget-box\">\n<div class=\"widget-head\">\n    <div>\n        <div class=\"widget-title ellipsis\"><div class=\"number-label\">Total Salary</div></div>\n        <div class=\"widget-subtitle\"></div>\n    </div>\n    <div class=\"widget-control\"><div class=\"card-actions dropdown pull-right\">\n    <a>\n    ...\n    </a>\n    <ul class=\"dropdown-menu\" style=\"max-height: 300px; overflow-y: auto;\">\n        <li class=\"dropdown-item\">\n                        <a>Refresh</a>\n                    </li><li class=\"dropdown-item\">\n                        <a>Edit</a>\n                    </li>\n    </ul>\n</div></div>\n</div>\n<div class=\"widget-body\"><div class=\"widget-content\">\n    <div class=\"number\" id=\"total_salary\" style=\"color: undefined;\">\u20b9 0.00 </div>\n    <div class=\"card-stats grey-stat\">\n    <span class=\"percentage-stat-area\">\n        \n        <span class=\"percentage-stat\">\n            NaN %\n        </span>\n    </span>\n    <span class=\"stat-period text-muted\">\n        since last year\n    </span>\n</div></div></div>\n<div class=\"widget-footer\">\n</div>\n</div>\n<div class=\"widget         widget-shadow    number-widget-box\">\n    <div class=\"widget-head\">\n        <div>\n            <div class=\"widget-title ellipsis\"><div class=\"number-label\">Total Recurring</div></div>\n            <div class=\"widget-subtitle\"></div>\n        </div>\n        <div class=\"widget-control\"><div class=\"card-actions dropdown pull-right\">\n        <a>\n        ...\n        </a>\n        <ul class=\"dropdown-menu\" style=\"max-height: 300px; overflow-y: auto;\">\n            <li class=\"dropdown-item\">\n                            <a>Refresh</a>\n                        </li><li class=\"dropdown-item\">\n                            <a>Edit</a>\n                        </li>\n        </ul>\n    </div></div>\n    </div>\n    <div class=\"widget-body\"><div class=\"widget-content\">\n        <div class=\"number\" id=\"total_recurring\" style=\"color: undefined;\">\u20b9 0.00 </div>\n        <div class=\"card-stats grey-stat\">\n        <span class=\"percentage-stat-area\">\n            \n            <span class=\"percentage-stat\">\n                NaN %\n            </span>\n        </span>\n        <span class=\"stat-period text-muted\">\n            since last Year\n        </span>\n    </div></div></div>\n    <div class=\"widget-footer\">\n    </div>\n    </div>\n    <div class=\"widget         widget-shadow    number-widget-box\">\n        <div class=\"widget-head\">\n            <div>\n                <div class=\"widget-title ellipsis\"><div class=\"number-label\">Total Non Recurring</div></div>\n                <div class=\"widget-subtitle\"></div>\n            </div>\n            <div class=\"widget-control\"><div class=\"card-actions dropdown pull-right\">\n            <a>\n            ...\n            </a>\n            <ul class=\"dropdown-menu\" style=\"max-height: 300px; overflow-y: auto;\">\n                <li class=\"dropdown-item\">\n                                <a>Refresh</a>\n                            </li><li class=\"dropdown-item\">\n                                <a>Edit</a>\n                            </li>\n            </ul>\n        </div></div>\n        </div>\n        <div class=\"widget-body\"><div class=\"widget-content\">\n            <div class=\"number\" id=\"total_non_recurring\" style=\"color: undefined;\">\u20b9 0.00 </div>\n            <div class=\"card-stats grey-stat\">\n            <span class=\"percentage-stat-area\">\n                \n                <span class=\"percentage-stat\">\n                    NaN %\n                </span>\n            </span>\n            <span class=\"stat-period text-muted\">\n                since last year\n            </span>\n        </div></div></div>\n        <div class=\"widget-footer\">\n        </div>\n        </div>\n\n</div>\n</div>"
+  },
+  {
+   "fieldname": "request_details_section",
+   "fieldtype": "Section Break",
+   "label": "Request Details"
+  },
+  {
+   "fieldname": "non_recurring_expenses",
+   "fieldtype": "Table",
+   "label": "Non Recurring Expenses",
+   "options": "Non Recurring  And Capital Expenses"
+  },
+  {
+   "fieldname": "request_for_non_recurring_section",
+   "fieldtype": "Section Break",
+   "label": "Request For non Recurring "
+  },
+  {
+   "fieldname": "request_status",
+   "fieldtype": "Select",
+   "label": "Request Status",
+   "options": "Approved\nUnder Review\nRejected"
+  },
+  {
+   "fieldname": "total_income",
+   "fieldtype": "Currency",
+   "label": "Total Income "
+  },
+  {
+   "fieldname": "total_net_balance",
+   "fieldtype": "Currency",
+   "label": "Total Net balance"
+  },
+  {
+   "fieldname": "total_av_maintenance",
+   "fieldtype": "Currency",
+   "label": "Total AV Maintenance"
+  },
+  {
+   "fieldname": "total_ss_maintenance",
+   "fieldtype": "Currency",
+   "label": "Total SS Maintenance"
+  },
+  {
+   "fieldname": "total_salary",
+   "fieldtype": "Currency",
+   "label": "Total Salary"
+  },
+  {
+   "fieldname": "total_are",
+   "fieldtype": "Currency",
+   "label": "Total ARE "
+  },
+  {
+   "fieldname": "total_res",
+   "fieldtype": "Currency",
+   "label": "Total RES"
+  },
+  {
+   "fieldname": "total_nre",
+   "fieldtype": "Currency",
+   "label": "Total NRE"
   }
  ],
- "has_web_view": 1,
- "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-01-23 19:23:52.740749",
+ "modified": "2022-02-16 15:24:43.698788",
  "modified_by": "Administrator",
  "module": "Bcc",
  "name": "Budget Request",
@@ -188,22 +282,11 @@
    "share": 1,
    "submit": 1,
    "write": 1
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Budget Applicant",
-   "select": 1,
-   "share": 1,
-   "submit": 1,
-   "write": 1
   }
  ],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

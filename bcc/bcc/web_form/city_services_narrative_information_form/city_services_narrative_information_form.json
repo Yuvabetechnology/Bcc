@@ -10,7 +10,7 @@
  "amount_based_on_field": 0,
  "apply_document_permissions": 1,
  "button_label": "Save",
- "client_script": "frm.add_custom_button(__(buttonName), function(){\n  //perform desired action such as routing to new form or fetching etc.\n}, __(groupName));\n",
+ "client_script": "",
  "creation": "2022-01-22 18:32:03.411737",
  "custom_css": ".web-form-wrapper .form-section .section-head {\n    font-weight: bolder;\n    font-size: 20px;\n    padding: var(--padding-md) 0;\n}",
  "doc_type": "City Services Narrative Information",
@@ -21,7 +21,7 @@
  "is_standard": 1,
  "login_required": 1,
  "max_attachment_size": 0,
- "modified": "2022-01-25 11:47:09.374000",
+ "modified": "2022-02-16 09:59:57.565553",
  "modified_by": "Administrator",
  "module": "Bcc",
  "name": "city-services-narrative-information-form",
@@ -97,19 +97,6 @@
    "max_value": 0,
    "read_only": 0,
    "reqd": 0,
-   "show_in_filter": 0
-  },
-  {
-   "allow_read_on_all_link_options": 0,
-   "fieldname": "sector",
-   "fieldtype": "Select",
-   "hidden": 0,
-   "label": "Sector",
-   "max_length": 0,
-   "max_value": 0,
-   "options": "Education\nSocial Support\nMunicipal Services\nHealth\nForest\nOrganization\nArts Culture And Sports\nFarms\nOutreach\nLand\nMatrimandir\nHousing",
-   "read_only": 0,
-   "reqd": 1,
    "show_in_filter": 0
   },
   {

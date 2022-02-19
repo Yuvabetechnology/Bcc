@@ -1,15 +1,7 @@
 {
- "actions": [
-  {
-   "action": "/me",
-   "action_type": "Route",
-   "label": "Frappe"
-  }
- ],
+ "actions": [],
  "allow_events_in_timeline": 1,
- "allow_guest_to_view": 1,
  "allow_import": 1,
- "allow_rename": 1,
  "autoname": "field:applicant_name",
  "creation": "2022-01-22 12:33:41.148513",
  "doctype": "DocType",
@@ -50,19 +42,22 @@
   "challenges",
   "section_break_22",
   "human_resource",
-  "route",
   "amended_from"
  ],
  "fields": [
   {
    "fieldname": "application_type",
    "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
    "label": "Application Type",
    "options": "\nService\nProject"
   },
   {
    "fieldname": "created_on",
    "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_preview": 1,
    "label": "Created On"
   },
   {
@@ -220,12 +215,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "route",
-   "fieldtype": "Data",
-   "label": "route",
-   "read_only": 1
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -241,10 +230,9 @@
    "unique": 1
   }
  ],
- "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-01-28 12:14:11.239833",
+ "modified": "2022-02-15 13:06:44.202603",
  "modified_by": "Administrator",
  "module": "Bcc",
  "name": "City Services Narrative Information",
@@ -267,12 +255,14 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "if_owner": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "Budget Applicant",
    "select": 1,
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
