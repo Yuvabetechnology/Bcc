@@ -27,3 +27,7 @@ def get_application():
 	print(frappe.session.user)	
 	applications = frappe.get_all("City Services Narrative Information", filters={"owner": frappe.session.user}, fields=["applicant_name"])
 	return applications
+@frappe.whitelist(allow_guest=True)
+def av_maintenance_costing():
+	costing = frappe.getSingle('Budget Settings')
+	return costing.av_maintenance_costing

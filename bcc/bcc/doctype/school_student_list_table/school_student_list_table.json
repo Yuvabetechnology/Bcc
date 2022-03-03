@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-28 15:50:05.534775",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "code",
+  "student_name",
+  "mln",
+  "community_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "code",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Code",
+   "options": "FTS"
+  },
+  {
+   "fieldname": "student_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Student Name"
+  },
+  {
+   "fieldname": "mln",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "MLN"
+  },
+  {
+   "fieldname": "community_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Community Status",
+   "options": "AV\nNC\nGU\nOT"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-03-02 21:24:55.618581",
+ "modified_by": "Administrator",
+ "module": "Bcc",
+ "name": "School Student List Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

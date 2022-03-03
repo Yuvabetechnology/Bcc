@@ -6,19 +6,18 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "exp_code",
   "expense_name",
-  "required_amount",
   "current_spending",
+  "required_amount",
+  "comments",
   "amount_difference",
   "percentage",
-  "comments"
+  "exp_code"
  ],
  "fields": [
   {
    "fieldname": "exp_code",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Exp code"
   },
   {
@@ -26,30 +25,31 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Expense Name",
-   "options": "Administrative Recurring Expenses Item"
+   "options": "Administrative Recurring Expenses Item",
+   "reqd": 1
   },
   {
    "fieldname": "required_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Required Amount"
+   "label": "Required Amount",
+   "precision": "2",
+   "reqd": 1
   },
   {
    "fieldname": "current_spending",
    "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Current Spending"
+   "label": "Current Spending",
+   "reqd": 1
   },
   {
    "fieldname": "amount_difference",
    "fieldtype": "Currency",
-   "in_list_view": 1,
    "label": "Amount Difference"
   },
   {
    "fieldname": "percentage",
    "fieldtype": "Percent",
-   "in_list_view": 1,
    "label": "Percentage"
   },
   {
@@ -62,7 +62,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-01-23 13:10:14.184939",
+ "modified": "2022-03-02 12:01:46.400311",
  "modified_by": "Administrator",
  "module": "Bcc",
  "name": "Required Administrative Recurring Expenses",

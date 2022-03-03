@@ -24,14 +24,11 @@
    "translatable": 1
   },
   {
-   "allow_in_quick_entry": 1,
-   "bold": 1,
    "fieldname": "person_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "in_preview": 1,
-   "label": "Name",
-   "translatable": 1
+   "label": "Person Name"
   },
   {
    "fieldname": "email",
@@ -54,7 +51,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-01-22 18:29:16.687285",
+ "modified": "2022-02-21 21:01:38.539542",
  "modified_by": "Administrator",
  "module": "Bcc",
  "name": "Contact Persons",

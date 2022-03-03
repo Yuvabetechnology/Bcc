@@ -20,39 +20,52 @@
   {
    "fieldname": "first_name",
    "fieldtype": "Data",
-   "label": "First Name"
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
   },
   {
    "fieldname": "last_name",
    "fieldtype": "Data",
-   "label": "Last Name"
+   "in_list_view": 1,
+   "label": "Last Name",
+   "reqd": 1
   },
   {
    "fieldname": "master_list_number",
    "fieldtype": "Data",
-   "label": "Master List Number"
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Master List Number",
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "account_numberfs",
    "fieldtype": "Int",
-   "label": "Account Number(FS)"
+   "label": "Account Number(FS)",
+   "reqd": 1
   },
   {
    "fieldname": "community",
-   "fieldtype": "Data",
-   "label": "Community"
+   "fieldtype": "Link",
+   "label": "Community",
+   "options": "Auroville Community"
   },
   {
    "fieldname": "auroville_status",
    "fieldtype": "Select",
    "label": "Auroville Status",
-   "options": "Aurovilian\nNewcomer"
+   "options": "Aurovilian\nNewcomer",
+   "reqd": 1
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Email",
-   "options": "Email"
+   "options": "Email",
+   "reqd": 1
   },
   {
    "fieldname": "contact_number",
@@ -63,7 +76,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-01-22 15:17:46.412476",
+ "modified": "2022-02-21 15:54:53.928356",
  "modified_by": "Administrator",
  "module": "Bcc",
  "name": "Master List",
@@ -78,6 +91,17 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Budget Applicant",
+   "select": 1,
    "share": 1,
    "write": 1
   }

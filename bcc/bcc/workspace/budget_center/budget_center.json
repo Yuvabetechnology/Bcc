@@ -1,16 +1,9 @@
 {
  "category": "Modules",
- "charts": [
-  {
-   "chart_name": "Total Budget Application"
-  },
-  {
-   "chart_name": "Total Budget Request"
-  }
- ],
- "creation": "2022-01-30 12:34:21.433695",
+ "charts": [],
+ "creation": "2022-02-23 10:07:57.236947",
  "developer_mode_only": 0,
- "disable_user_customization": 0,
+ "disable_user_customization": 1,
  "docstatus": 0,
  "doctype": "Workspace",
  "extends_another_page": 0,
@@ -19,77 +12,8 @@
  "is_default": 0,
  "is_standard": 1,
  "label": "Budget Center",
- "links": [
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Budget",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Budget Request",
-   "link_to": "Budget Request",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Budget Applicant",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Narrative Information",
-   "link_to": "City Services Narrative Information",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Budget Review",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Budget Review",
-   "link_to": "Budget Applicant",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Budget Approval ",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Budget Approval",
-   "link_to": "Budget Applicant",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  }
- ],
- "modified": "2022-01-30 12:49:17.126202",
+ "links": [],
+ "modified": "2022-02-23 10:12:17.037270",
  "modified_by": "Administrator",
  "module": "Bcc",
  "name": "Budget Center",
@@ -99,7 +23,7 @@
  "shortcuts": [
   {
    "doc_view": "List",
-   "label": "Budget Applicant",
+   "label": "Budget Application",
    "link_to": "City Services Narrative Information",
    "type": "DocType"
   },
@@ -108,12 +32,6 @@
    "label": "Budget Request",
    "link_to": "Budget Request",
    "type": "DocType"
-  },
-  {
-   "doc_view": "Dashboard",
-   "label": "Dashboard",
-   "link_to": "Budget Overview",
-   "type": "Dashboard"
   }
  ]
 }

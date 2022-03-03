@@ -31,7 +31,7 @@
   {
    "bold": 1,
    "fieldname": "unit_cost",
-   "fieldtype": "Int",
+   "fieldtype": "Currency",
    "in_list_view": 1,
    "in_preview": 1,
    "label": "Unit Cost / Cost Per Square ",
@@ -42,14 +42,13 @@
    "fieldname": "yearly_total",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Yearly Total",
-   "reqd": 1
+   "label": "Yearly Total"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-02-16 11:38:18.928179",
+ "modified": "2022-03-02 15:33:38.270984",
  "modified_by": "Administrator",
  "module": "Bcc",
  "name": "Non Recurring  And Capital Expenses",

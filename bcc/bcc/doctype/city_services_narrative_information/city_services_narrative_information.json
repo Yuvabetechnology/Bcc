@@ -15,7 +15,7 @@
   "column_break_4",
   "created_by",
   "created_on",
-  "sector",
+  "category",
   "website",
   "section_break_7",
   "contact_persons",
@@ -56,15 +56,11 @@
   {
    "fieldname": "created_on",
    "fieldtype": "Datetime",
+   "hidden": 1,
    "in_list_view": 1,
    "in_preview": 1,
-   "label": "Created On"
-  },
-  {
-   "fieldname": "sector",
-   "fieldtype": "Select",
-   "label": "Sector",
-   "options": "Education\nSocial Support\nMunicipal Services\nHealth\nForest\nOrganization\nArts Culture And Sports\nFarms\nOutreach\nLand\nMatrimandir\nHousing"
+   "label": "Created On",
+   "read_only": 1
   },
   {
    "fieldname": "website",
@@ -72,16 +68,18 @@
    "label": "Website (if any): "
   },
   {
-   "depends_on": "eval:doc.application_type == \"Service\"",
    "fieldname": "organization_email",
    "fieldtype": "Data",
-   "label": "Organization Email"
+   "label": "Service / Project Contact Email",
+   "options": "Email",
+   "reqd": 1
   },
   {
    "fieldname": "contact_persons",
    "fieldtype": "Table",
    "label": "Contact Persons",
-   "options": "Contact Persons"
+   "options": "Contact Persons",
+   "reqd": 1
   },
   {
    "fieldname": "why_service_needed",
@@ -195,8 +193,10 @@
   {
    "fieldname": "created_by",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Created By",
-   "options": "User"
+   "options": "User",
+   "read_only": 1
   },
   {
    "fieldname": "similar_service",
@@ -227,12 +227,19 @@
    "fieldname": "applicant_name",
    "fieldtype": "Data",
    "label": "Applicant Name",
+   "reqd": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "General\nSchool\nSocial Support"
   }
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2022-02-15 13:06:44.202603",
+ "modified": "2022-02-28 15:08:49.356267",
  "modified_by": "Administrator",
  "module": "Bcc",
  "name": "City Services Narrative Information",

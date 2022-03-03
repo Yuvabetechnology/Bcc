@@ -6,19 +6,18 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "exp_code",
   "expense_name",
   "required_amount",
   "current_spending",
+  "comments",
+  "exp_code",
   "amount_difference",
-  "percentage",
-  "comments"
+  "percentage"
  ],
  "fields": [
   {
    "fieldname": "exp_code",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Exp code"
   },
   {
@@ -26,30 +25,30 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Expense Name",
-   "options": "Schools Administrative Recurring Expenses Item"
+   "options": "Schools Administrative Recurring Expenses Item",
+   "reqd": 1
   },
   {
    "fieldname": "required_amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Required Amount"
+   "label": "Required Amount",
+   "reqd": 1
   },
   {
    "fieldname": "current_spending",
    "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Current Spending"
+   "label": "Current Spending",
+   "reqd": 1
   },
   {
    "fieldname": "amount_difference",
    "fieldtype": "Currency",
-   "in_list_view": 1,
    "label": "Amount Difference"
   },
   {
    "fieldname": "percentage",
    "fieldtype": "Percent",
-   "in_list_view": 1,
    "label": "Percentage"
   },
   {
@@ -62,7 +61,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-01-23 13:16:03.738202",
+ "modified": "2022-03-02 14:03:41.384108",
  "modified_by": "Administrator",
  "module": "Bcc",
  "name": "Administrative Recurring Expenses for Schools",

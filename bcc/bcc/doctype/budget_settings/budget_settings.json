@@ -25,7 +25,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2022-02-17 16:08:25.025316",
+ "modified": "2022-02-25 12:34:43.255720",
  "modified_by": "Administrator",
  "module": "Bcc",
  "name": "Budget Settings",
@@ -40,6 +40,13 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Budget Applicant",
+   "share": 1
   }
  ],
  "sort_field": "modified",
