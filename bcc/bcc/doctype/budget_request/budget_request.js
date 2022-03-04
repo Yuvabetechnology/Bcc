@@ -317,6 +317,7 @@ frappe.ui.form.on('Budget Request', {
     //referesh 
     refresh: function (frm) {
         frm.get_dashboard_data = function (frm) {
+            
             console.log(frm.doc.total_income)
 
             $("#total_income").text("₹ "+frm.doc.total_income);
@@ -328,10 +329,10 @@ frappe.ui.form.on('Budget Request', {
             if(frm.doc.total_recurring_administrative_cost_current == null){
                 $('indicator-pill-round ').removeClass('green').addClass('red');
 
-            }else if(frm.doc.total_recurring_administrative_cost_current > 0){
-                $('#recurring_arrow').removeClass('green').addClass('red');
             }else if(frm.doc.total_recurring_administrative_cost_current < 0){
-                $('indicator-pill-round ').removeClass('red').addClass('green');
+                $('#recurring_arrow').removeClass('green').addClass('red');
+            }else if(frm.doc.total_recurring_administrative_cost_current > 0){
+                $('#recurring_arrow ').removeClass('red').addClass('green');
 
             }
             $("#recurring_diff").text(((frm.doc.total_recurring_administrative_cost_required - frm.doc.total_recurring_administrative_cost_current)/frm.doc.total_recurring_administrative_cost_current*100).toFixed(2)+"%");
