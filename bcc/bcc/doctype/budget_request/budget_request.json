@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:REQ-{#####} -{budget_application}-{DD}/{MM}/{YY}",
+ "autoname": "format:{budget_type}-REQ-{#####}-{budget_application}",
  "creation": "2022-01-22 12:32:04.476723",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -219,13 +219,14 @@
    "label": "Request For non Recurring "
   },
   {
+   "default": "Pending",
    "fieldname": "request_status",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "hidden": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Request Status",
-   "options": "Approved\nUnder Review\nRejected"
+   "read_only": 1
   },
   {
    "fieldname": "total_income",
@@ -324,10 +325,11 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2022-03-04 14:01:20.614393",
+ "modified": "2022-03-04 20:30:56.813025",
  "modified_by": "Administrator",
  "module": "Bcc",
  "name": "Budget Request",
+ "name_case": "UPPER CASE",
  "owner": "Administrator",
  "permissions": [
   {
