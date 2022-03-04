@@ -13,6 +13,7 @@ frappe.ui.form.on('Budget Request', {
     setup: function (frm) {
         var selftotal = new Map();
         var servicetotal = new Map();
+  
         frm.get_application_cat = function (application) {
 
             if (!application) {
@@ -315,11 +316,35 @@ frappe.ui.form.on('Budget Request', {
 
     //referesh 
     refresh: function (frm) {
+        frm.get_dashboard_data = function (frm) {
+            console.log(frm.doc.total_income)
+
+            $("#total_income").text("₹ "+frm.doc.total_income);
+            $("#total_avm").text("₹ "+frm.doc.total_av_maintenance);
+            $("#total_nb").text("₹ "+frm.doc.total_net_balance);
+            $("#total_self").text("₹ "+frm.doc.total_self);
+            $("#total_salary").text("₹ "+frm.doc.total_salary);
+            $("#total_recurring").text("₹ "+frm.doc.total_recurring_administrative_cost_required);
+            if(frm.doc.total_recurring_administrative_cost_current == null){
+                $('indicator-pill-round ').removeClass('green').addClass('red');
+
+            }else if(frm.doc.total_recurring_administrative_cost_current > 0){
+                $('#recurring_arrow').removeClass('green').addClass('red');
+            }else if(frm.doc.total_recurring_administrative_cost_current < 0){
+                $('indicator-pill-round ').removeClass('red').addClass('green');
+
+            }
+            $("#recurring_diff").text(((frm.doc.total_recurring_administrative_cost_required - frm.doc.total_recurring_administrative_cost_current)/frm.doc.total_recurring_administrative_cost_current*100).toFixed(2)+"%");
+            $("#total_non_recurring").text("₹ "+frm.doc.total_non_recurring_expenses);
+        }
+        
         if (frm.doc.docstatus === 0) {
+          
             frm.add_custom_button(__('Cancel'), function () {
                 frm.save('Cancel');
             });
         }
+        frm.get_dashboard_data(frm);
         frm.get_application_cat = function (application) {
 
             if (!application) {
