@@ -1,20 +1,35 @@
 {
  "actions": [],
- "autoname": "Prompt",
- "creation": "2022-01-22 12:37:08.017042",
+ "allow_rename": 1,
+ "autoname": "format:Narrative-Report-{budget_application}-{budget_request}-{MM}-{DD}-{YYYY}",
+ "creation": "2022-03-10 11:35:55.513532",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "budget_application",
+  "budget_request",
   "amended_from"
  ],
  "fields": [
+  {
+   "fieldname": "budget_application",
+   "fieldtype": "Link",
+   "label": "Budget Application",
+   "options": "City Services Narrative Information"
+  },
+  {
+   "fieldname": "budget_request",
+   "fieldtype": "Link",
+   "label": "Budget Request ",
+   "options": "Budget Request"
+  },
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
    "no_copy": 1,
-   "options": "City Services Narrative Report",
+   "options": "Budget Narrative Report",
    "print_hide": 1,
    "read_only": 1
   }
@@ -22,10 +37,10 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-03-10 11:30:24.894848",
+ "modified": "2022-03-10 11:35:55.513532",
  "modified_by": "Administrator",
  "module": "Bcc",
- "name": "City Services Narrative Report",
+ "name": "Budget Narrative Report",
  "owner": "Administrator",
  "permissions": [
   {
@@ -49,12 +64,14 @@
    "read": 1,
    "report": 1,
    "role": "Budget Applicant",
-   "select": 1,
    "share": 1,
    "submit": 1,
    "write": 1
   }
  ],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

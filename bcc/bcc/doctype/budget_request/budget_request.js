@@ -11,9 +11,28 @@ frappe.ui.form.on('Budget Request', {
 
     //setup
     setup: function (frm) {
-        var selftotal = new Map();
-        var servicetotal = new Map();
-  
+        $("input[data-fieldname='required_amount']").css("color", "green");
+        frm.get_expense_items = function () {
+            frappe.call({
+                method: "bcc.bcc.doctype.budget_request.budget_request.get_expense_list",
+                callback: function (r) {
+                    if (r.message) {
+                       frm.doc.administrative_recurring_expense = []
+                       $.each(r.message,function(_i,d){
+                           let expense_item = frm.add_child("administrative_recurring_expense");
+                            expense_item.expense_name = d.name;
+                            expense_item.current_spending = 0;
+                            expense_item.required_amount = 0;
+                            // expense_item.comments = Null;
+
+                       })
+                       refresh_field("administrative_recurring_expense");
+                      
+                    }
+                }
+            })
+         
+        },
         frm.get_application_cat = function (application) {
 
             if (!application) {
@@ -309,6 +328,21 @@ frappe.ui.form.on('Budget Request', {
                 });
                 frm.set_value('total_non_recurring_expenses', non_recurring_total);
 
+            },
+            frm.fill_av_account = function (frm, row) {
+                frappe.msgprint(row.person_name)
+                frappe.call({
+                    method: "bcc.bcc.doctype.budget_request.budget_request.get_master_list_detail",
+                    args: {
+                        "master_list_id": row.person_name
+                    },
+                    callback: function (r) {
+                        console.log(r.message.account_numberfs)
+                        row.account_number = r.message.account_numberfs;
+                        refresh_field("auroville_maintenance")
+                    }
+                })
+                
             }
 
     },
@@ -316,6 +350,7 @@ frappe.ui.form.on('Budget Request', {
 
     //referesh 
     refresh: function (frm) {
+        frm.get_expense_items();
         frm.get_dashboard_data = function (frm) {
             
             console.log(frm.doc.total_income)
@@ -411,8 +446,9 @@ frappe.ui.form.on('Auroville Maintenance', {
     person_name: function (frm, cdt, cdn) {
 
         let row = locals[cdt][cdn];
-        frm.avm_dulicate(frm, row, row.person_name);
 
+        frm.avm_dulicate(frm, row, row.person_name);
+        frm.fill_av_account(frm, row);
     },
     maintenance_type: function (frm, cdt, cdn) {
         let row = locals[cdt][cdn];
@@ -471,6 +507,7 @@ frappe.ui.form.on('Salaries And Wages', {
 })
 
 frappe.ui.form.on('Required Administrative Recurring Expenses',{
+    
     administrative_recurring_expense_remove:function(frm){
 frm.calcualte_are_required_total(frm);
 frm.calculate_are_current_total(frm);
@@ -482,11 +519,20 @@ frm.calculate_are_current_total(frm);
     required_amount:function(frm,cdt,cdn){
         let row = locals[cdt][cdn]
         frm.calcualte_are_required_total(frm,row)
+       
+      if(row.current_spending <= 0){
+          $("input[data-fieldname='required_amount']").css("color","red")
+          refresh_field('required_amount');
+      }
+       
 
     },
     current_spending:function(frm,cdt,cdn){
         let row = locals[cdt][cdn]
         frm.calculate_are_current_total(frm,row)
+        if(row.current_spending <= 0){
+            $("input[data-fieldname='current_spending']").css("color","red")
+        }
     }
 })
 
@@ -550,5 +596,6 @@ frappe.ui.form.on('Budget Request',{
                                 }
             }
         });
+        frm.save();
     }
 })

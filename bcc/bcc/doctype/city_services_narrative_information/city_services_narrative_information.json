@@ -71,8 +71,8 @@
    "fieldname": "organization_email",
    "fieldtype": "Data",
    "label": "Service / Project Contact Email",
-   "options": "Email",
-   "reqd": 1
+   "mandatory_depends_on": "eval: doc.applicant_name > 0",
+   "options": "Email"
   },
   {
    "fieldname": "contact_persons",
@@ -87,9 +87,11 @@
    "label": "Why do you feel this service is needed?"
   },
   {
+   "description": "Testing",
    "fieldname": "intend_brief_overview",
    "fieldtype": "Text Editor",
-   "label": "Give a brief overview of what kind of service you intend provide to the community:"
+   "label": "Give a brief overview of what kind of service you intend provide to the community:",
+   "translatable": 1
   },
   {
    "fieldname": "intended_beneficiaries",
@@ -227,7 +229,6 @@
    "fieldname": "applicant_name",
    "fieldtype": "Data",
    "label": "Applicant Name",
-   "reqd": 1,
    "unique": 1
   },
   {
@@ -239,7 +240,7 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2022-02-28 15:08:49.356267",
+ "modified": "2022-03-11 17:48:00.911206",
  "modified_by": "Administrator",
  "module": "Bcc",
  "name": "City Services Narrative Information",

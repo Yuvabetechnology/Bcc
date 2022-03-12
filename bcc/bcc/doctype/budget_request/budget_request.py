@@ -36,3 +36,12 @@ def get_application():
 def av_maintenance_costing():
 	costing = frappe.getSingle('Budget Settings')
 	return costing.av_maintenance_costing
+
+@frappe.whitelist(allow_guest=True)
+def get_expense_list():
+	expense_list = frappe.get_list("Administrative Recurring Expenses Item", filters={"docstatus": "0"})
+	return expense_list
+@frappe.whitelist(allow_guest=True)
+def get_master_list_detail(master_list_id):
+	master_list_details = frappe.get_doc("Master List", master_list_id)
+	return master_list_details

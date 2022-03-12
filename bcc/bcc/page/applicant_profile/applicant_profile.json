@@ -1,0 +1,23 @@
+{
+ "content": null,
+ "creation": "2022-03-12 10:08:46.265098",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2022-03-12 10:08:46.265098",
+ "modified_by": "Administrator",
+ "module": "Bcc",
+ "name": "applicant-profile",
+ "owner": "Administrator",
+ "page_name": "Applicant Profile",
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Budget Applicant Profile"
+}

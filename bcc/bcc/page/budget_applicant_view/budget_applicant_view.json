@@ -1,0 +1,22 @@
+{
+ "content": null,
+ "creation": "2022-03-05 14:46:58.399327",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2022-03-12 10:03:10.122286",
+ "modified_by": "Administrator",
+ "module": "Bcc",
+ "name": "budget-applicant-view",
+ "owner": "Administrator",
+ "page_name": "budget-applicant-view",
+ "roles": [
+  {
+   "role": "Budget Applicant"
+  }
+ ],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0
+}

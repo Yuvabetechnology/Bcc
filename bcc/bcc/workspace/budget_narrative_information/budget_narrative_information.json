@@ -1,0 +1,35 @@
+{
+ "category": "Modules",
+ "charts": [],
+ "creation": "2022-03-10 14:36:29.802341",
+ "developer_mode_only": 0,
+ "disable_user_customization": 0,
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "extends_another_page": 0,
+ "hide_custom": 0,
+ "icon": "settings",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "label": "Budget Narrative Information",
+ "links": [],
+ "modified": "2022-03-10 14:38:02.793261",
+ "modified_by": "Administrator",
+ "module": "Bcc",
+ "name": "Budget Narrative Information",
+ "owner": "Administrator",
+ "pin_to_bottom": 0,
+ "pin_to_top": 0,
+ "shortcuts": [
+  {
+   "color": "#761ACB",
+   "doc_view": "List",
+   "format": "{} Current",
+   "label": "Budget Narrative Information",
+   "link_to": "City Services Narrative Information",
+   "stats_filter": "{\"docstatus\":\"1\"}",
+   "type": "DocType"
+  }
+ ]
+}
