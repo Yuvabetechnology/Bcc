@@ -49,15 +49,12 @@
 	// })
 
 function reloadCurrentStateOptions() {
-
-frappe.web_form.on("Income And Revenue",{
-	code:function(frm,cdt,cdn){
-
-		console.log("test")
+let table = frappe.web_form.fields_dict.specify_income_and_revenue;
+table.grid.grid_rows.forEach(row => {
+	let field = row.get_field("select_1")
+	field.df.onchange = () => {
+		console.log("hello")
 	}
-
-
-
 })
 
 }

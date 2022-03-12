@@ -11,7 +11,7 @@ frappe.ui.form.on('Budget Request', {
 
     //setup
     setup: function (frm) {
-        $("input[data-fieldname='required_amount']").css("color", "green");
+   
         frm.get_expense_items = function () {
             frappe.call({
                 method: "bcc.bcc.doctype.budget_request.budget_request.get_expense_list",
@@ -267,6 +267,9 @@ frappe.ui.form.on('Budget Request', {
                 frm.doc.administrative_recurring_expense.forEach(d => {
                     are_required_total += d.required_amount;
                 });
+                $("input[data-fieldname='current_spending']").on(function(){
+                    console.log("helo")
+                })
                 frm.set_value('total_recurring_administrative_cost_required', are_required_total);
             },
             frm.calculate_are_current_total = function (frm, row) {
@@ -354,7 +357,7 @@ frappe.ui.form.on('Budget Request', {
         frm.get_dashboard_data = function (frm) {
             
             console.log(frm.doc.total_income)
-
+         
             $("#total_income").text("₹ "+frm.doc.total_income);
             $("#total_avm").text("₹ "+frm.doc.total_av_maintenance);
             $("#total_nb").text("₹ "+frm.doc.total_net_balance);
@@ -520,19 +523,15 @@ frm.calculate_are_current_total(frm);
         let row = locals[cdt][cdn]
         frm.calcualte_are_required_total(frm,row)
        
-      if(row.current_spending <= 0){
-          $("input[data-fieldname='required_amount']").css("color","red")
-          refresh_field('required_amount');
-      }
        
-
+       
+     
     },
     current_spending:function(frm,cdt,cdn){
         let row = locals[cdt][cdn]
         frm.calculate_are_current_total(frm,row)
-        if(row.current_spending <= 0){
-            $("input[data-fieldname='current_spending']").css("color","red")
-        }
+
+ 
     }
 })
 
@@ -599,3 +598,17 @@ frappe.ui.form.on('Budget Request',{
         frm.save();
     }
 })
+
+frappe.ui.form.on('Budget Request', {
+    rate: function(frm, cdt, cdn) {
+        cur_frm.fields_dict["administrative_recurring_expense"].$wrapper.find('.grid-body .rows').find(".grid-row").each(function(i, item) {
+            let d = locals[cur_frm.fields_dict[" administrative_recurring_expense"].grid.doctype][$(item).attr('data-name')];
+            if(d["current_spending"] == 0){
+                $(item).find('.grid-static-col').css({'background-color': 'yellow'});
+            }
+            else {
+                $(item).find('.grid-static-col').css({'background-color': 'transparent'});
+            }
+        });
+    }
+});
